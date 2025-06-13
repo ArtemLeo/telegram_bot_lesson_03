@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Inception",
+        "description": "Злодій, який краде корпоративні секрети за допомогою технології спільного сну, отримує завдання вбудувати ідею в розум генерального директора.",
+        "rating": 8.8,
+        "genre": "Action, Adventure, Sci-Fi",
+        "actors": [
+            "Leonardo DiCaprio",
+            "Joseph Gordon-Levitt",
+            "Elliot Page"
+        ],
+        "poster": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg"
+    },
+    {
+        "name": "Fight Club",
+        "description": "Страждаючий безсонням офісний працівник і безтурботний виробник мила створюють підпільний бойовий клуб, який переростає в щось набагато більше.",
+        "rating": 8.8,
+        "genre": "Drama",
+        "actors": [
+            "Brad Pitt",
+            "Edward Norton",
+            "Helena Bonham Carter"
+        ],
+        "poster": "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg"
+    },
+    {
+        "name": "The Silence of the Lambs",
+        "description": "Молодому агенту ФБР необхідно отримати допомогу від ув'язненого і маніпулятивного вбивці-канібала, щоб спіймати іншого серійного вбивцю, божевільного, який знімає шкіру зі своїх жертв.",
+        "rating": 8.6,
+        "genre": "Crime, Drama, Thriller",
+        "actors": [
+            "Jodie Foster",
+            "Anthony Hopkins",
+            "Lawrence A. Bonney"
+        ],
+        "poster": "https://upload.wikimedia.org/wikipedia/en/8/86/The_Silence_of_the_Lambs_poster.jpg"
+    },
+    {
+        "name": "Interstellar",
+        "description": "Команда дослідників подорожує через кротову нору в просторі у спробі забезпечити виживання людства.",
+        "rating": 8.6,
+        "genre": "Adventure, Drama, Sci-Fi",
+        "actors": [
+            "Matthew McConaughey",
+            "Anne Hathaway",
+            "Jessica Chastain"
+        ],
+        "poster": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg"
+    },
+    {
+        "name": "Jurassic Park",
+        "description": "Мільярдер-ентузіаст створює парк розваг з клонованими динозаврами, але все йде не за планом, коли динозаври вириваються на волю і починають полювати на відвідувачів парку.",
+        "rating": 8.1,
+        "genre": "Adventure, Sci-Fi, Thriller",
+        "actors": [
+            "Sam Neill",
+            "Laura Dern",
+            "Jeff Goldblum"
+        ],
+        "poster": "https://upload.wikimedia.org/wikipedia/en/e/e7/Jurassic_Park_poster.jpg"
+    },
+    {
+        "name": "The Dark Knight Rises",
+        "description": "Бетмен повертається, щоб врятувати Готем від нового ворога Бейна, який загрожує знищити місто. Бетмен повинен подолати свої фізичні та емоційні випробування, щоб зупинити Бейна.",
+        "rating": 8.4,
+        "genre": "Action, Thriller",
+        "actors": [
+            "Christian Bale",
+            "Tom Hardy",
+            "Anne Hathaway"
+        ],
+        "poster": "https://upload.wikimedia.org/wikipedia/en/8/83/Dark_knight_rises_poster.jpg"
+    },
+    {
+        "name": "The Avengers: Endgame",
+        "description": "Після руйнівних подій, спричинених Таносом, залишки Месників та їхні союзники збираються разом, щоб відновити Всесвіт і зупинити Таноса раз і назавжди.",
+        "rating": 8.4,
+        "genre": "Action, Adventure, Sci-Fi",
+        "actors": [
+            "Robert Downey Jr.",
+            "Chris Evans",
+            "Mark Ruffalo"
+        ],
+        "poster": "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg"
+    },
+    {
+        "name": "The Revenant",
+        "description": "Історія виживання мисливця Х'ю Гласса, який залишається наодинці в дикій природі після нападу ведмедя. Він виживає завдяки своїй силі волі та бажанню помститися тим, хто покинув його померти.",
+        "rating": 8.0,
+        "genre": "Adventure, Drama, Thriller",
+        "actors": [
+            "Leonardo DiCaprio",
+            "Tom Hardy",
+            "Domhnall Gleeson"
+        ],
+        "poster": "https://upload.wikimedia.org/wikipedia/en/b/b6/The_Revenant_2015_film_poster.jpg"
+    }
+]

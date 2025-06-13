@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Django Unchained",
+        "description": "Фільм розповідає історію раба на ім'я Джанго, який об'єднується з німецьким мисливцем за головами, щоб врятувати свою дружину від жорстокого власника плантації.",
+        "rating": 8.5,
+        "genre": "Western, Action",
+        "actors": ["Jamie Foxx, Christoph Waltz, Leonardo DiCaprio"],
+        "poster": "https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_Poster.jpg"
+    },
+    {
+        "name": "Forrest Gump",
+        "description": "Історія життя Форреста Гампа, простодушного, але доброї людини з низьким рівнем інтелекту, який стає свідком і несподівано бере участь у багатьох знакових подіях другої половини 20-го століття в США.",
+        "rating": 8.8,
+        "genre": "Drama, Romance",
+        "actors": ["Tom Hanks, Robin Wright, Gary Sinise"],
+        "poster": "https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg"
+    }
+]

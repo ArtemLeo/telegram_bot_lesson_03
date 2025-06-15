@@ -10,27 +10,20 @@ from config import BOT_TOKEN as TOKEN
 from aiogram import Bot, Dispatcher, html
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
-from aiogram.filters import CommandStart, Command
+from aiogram.filters import Command
 from aiogram.types import Message, CallbackQuery, URLInputFile, ReplyKeyboardRemove
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
-
-# Імпортуємо команди, які використовуються в боті
-from commands import (FILMS_COMMAND, START_COMMAND, FILM_CREATE_COMMAND, BOT_COMMANDS)
-
-# Імпортуємо функції для отримання та додавання даних про фільми
+from commands import FILMS_COMMAND, START_COMMAND, FILM_CREATE_COMMAND, BOT_COMMANDS
 from data import get_films, add_film
-
-# Імпортуємо функції для створення клавіатур та обробки зворотних викликів
 from keyboards import films_keyboard_markup, FilmCallback
-
-# Імпортуємо модель даних для фільму
 from models import Film
 
 # Ініціалізуємо диспетчер для обробки оновлень
 dp = Dispatcher()
 
 
+# Форма для отримання інформації про фільми від користувача
 class FilmForm(StatesGroup):
     name = State()
     description = State()
@@ -43,7 +36,6 @@ class FilmForm(StatesGroup):
 # Обробник для команди /start
 @dp.message(Command("start"))
 async def start(message: Message) -> None:
-    # Відповідаємо на команду /start, вітаючи користувача
     await message.answer(
         f"Hello🖐, {html.bold(message.from_user.full_name)}!\n"
         "I'm your first Telegram Bot 🥳"
@@ -56,7 +48,7 @@ async def films(message: Message) -> None:
     data = get_films()
     markup = films_keyboard_markup(films_list=data)
     await message.answer(
-        f"<b>Список фільмів: 🎞</b>\nОберіть фільм, щоб отримати інформацію про нього.",
+        f"<b>Список фільмів: 🎬</b>\nОберіть фільм, щоб отримати інформацію про нього.",
         reply_markup=markup
     )
 
@@ -72,11 +64,13 @@ async def callback_film(callback: CallbackQuery, callback_data: FilmCallback) ->
     film = Film(**film_data)
 
     # Формуємо текст повідомлення з деталями про фільм
-    text = f"<b>Фільм:</b> {film.name}\n" \
-           f"<b>Опис:</b> {film.description}\n" \
-           f"<b>Рейтинг:</b> {film.rating}\n" \
-           f"<b>Жанр:</b> {film.genre}\n" \
-           f"<b>Актори:</b> {', '.join(film.actors)}\n"
+    text = (
+        f"<b>Фільм:</b> {film.name}\n"
+        f"<b>Опис:</b> {film.description}\n"
+        f"<b>Рейтинг:</b> {film.rating}\n"
+        f"<b>Жанр:</b> {film.genre}\n"
+        f"<b>Актори:</b> {', '.join(film.actors)}\n"
+    )
 
     # Відправляємо фото з постером фільму та текстом з деталями
     await callback.message.answer_photo(
@@ -88,6 +82,7 @@ async def callback_film(callback: CallbackQuery, callback_data: FilmCallback) ->
     )
 
 
+# Функції-обробники для кожного поля форми отримання інформації від користувача
 @dp.message(FILM_CREATE_COMMAND)
 async def film_create(message: Message, state: FSMContext) -> None:
     await state.set_state(FilmForm.name)
@@ -154,7 +149,7 @@ async def film_poster(message: Message, state: FSMContext) -> None:
     add_film(film.model_dump())
     await state.clear()
     await message.answer(
-        f"Фільм {film.name} успішно додано ✅",
+        f"<b>Фільм {film.name} успішно додано ✅</b>",
         reply_markup=ReplyKeyboardRemove(),
     )
 
@@ -165,6 +160,7 @@ async def main() -> None:
     bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     # Встановлюємо команди бота
     await bot.set_my_commands(BOT_COMMANDS)
+
     # Запускаємо цикл опитування для отримання оновлень
     await dp.start_polling(bot)
 
